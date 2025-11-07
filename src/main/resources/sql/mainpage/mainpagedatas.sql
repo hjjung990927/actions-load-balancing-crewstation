@@ -119,6 +119,10 @@ select * from view_post_purchase;
 Select * from tbl_member;
 Select * from tbl_like;
 
+delete from tbl_member where id > 1;
+select * from tbl_post;
+delete from tbl_post where id = 1;
+
 UPDATE tbl_member
 SET member_name = '데구르르구르는바나나'
 WHERE id = 3;

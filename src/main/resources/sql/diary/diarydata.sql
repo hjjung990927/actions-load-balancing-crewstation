@@ -624,6 +624,10 @@ values (1,29);
 INSERT INTO tbl_country(country_name)
 values ('프랑스');
 
+delete from tbl_country where id < 6;
+
+select * from tbl_country;
+
 INSERT INTO tbl_country(country_name)
 VALUES ('가나'),
        ('가봉'),
@@ -806,6 +810,7 @@ VALUES ('가나'),
        ('팔레스타인'),
        ('페루'),
        ('포르투갈'),
+       ('프랑스'),
        ('폴란드'),
        ('피지'),
        ('핀란드'),
