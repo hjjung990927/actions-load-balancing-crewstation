@@ -55,6 +55,8 @@ jobs:
               --build-arg NAVER_CLIENT_SECRET=${{ secrets.NAVER_CLIENT_SECRET }} \
               --build-arg EMAIL_PASSWORD="${{ secrets.EMAIL_PASSWORD }}" \
               --build-arg EMAIL_USERNAME=${{ secrets.EMAIL_USERNAME }} \
+              --build-arg SMS_ACCESS=${{ secrets.SMS_ACCESS }} \
+              --build-arg SMS_SECRET=${{ secrets.SMS_SECRET }} \
             -t crewstation .
             docker run -d -p 80:10000 --name crewstation \
               -e EC2_HOST=${{ secrets.EC2_HOST }} \
@@ -69,6 +71,8 @@ jobs:
               -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
               -e EMAIL_PASSWORD="${{ secrets.EMAIL_PASSWORD }}" \
               -e EMAIL_USERNAME=${{ secrets.EMAIL_USERNAME }} \
+              -e SMS_ACCESS=${{ secrets.SMS_ACCESS }} \
+              -e SMS_SECRET=${{ secrets.SMS_SECRET }} \
               crewstation
 
       - name: Clean up not used images
