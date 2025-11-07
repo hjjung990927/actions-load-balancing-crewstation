@@ -100,6 +100,28 @@
 
 <img width="722" height="125" alt="서버진척도" src="https://github.com/user-attachments/assets/22ad204c-49be-4bd7-8898-a74afd1ddb4b" />
 
+## 🚀 NGINX 로드밸런싱 + GitHub Actions 자동 배포
+
+### 🧩 Trouble Shooting
+
+#### 🔍 문제 원인
+
+| Issue                  | Cause               |
+| ---------------------- | ------------------- |
+| 빌드된 이미지(crewstation)가 아예 만들어지지 않음 | crewstation-0.0.1-SNAPSHOT.jar 경로에 실제 jar 파일이 없음 |
+<img width="971" height="371" alt="troubleshooting" src="https://github.com/user-attachments/assets/67d74f42-ad98-417f-aed7-972c3e32d98a" />
+
+#### ✅ 해결 방안
+  ```
+  ~$ chmod +x gradlew
+  // gradlew 스크립트에 실행 권한을 추가
+
+  ~$ ./gradlew clean build -x test
+  // 다시 빌드 실행
+
+  ~$ ls build/libs
+  // 빌드 완료 후 JAR 생성 확인
+  ```
 ## ✍️ 총평
 
 #### ✨ 느낀 점
