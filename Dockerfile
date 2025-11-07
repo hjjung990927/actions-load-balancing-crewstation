@@ -73,3 +73,4 @@ EXPOSE 10000
 
 # 실행 명령
 ENTRYPOINT ["java", "-jar", "crewstation.jar"]
+
