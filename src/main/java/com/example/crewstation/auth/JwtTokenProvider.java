@@ -194,11 +194,27 @@ public class JwtTokenProvider {
 //    쿠키와 Redis에서 각 RefreshToken을 가져와서 비교
     public boolean checkRefreshTokenBetweenCookieAndRedis(String username, String cookieRefreshToken){
         String redisRefreshToken = getRefreshToken(username);
+        if (redisRefreshToken == null) {
+            return false;
+        }
+
+        if (cookieRefreshToken == null) {
+            return false;
+        }
+
         return redisRefreshToken.equals(cookieRefreshToken);
     }
 
     public boolean checkRefreshTokenBetweenCookieAndRedis(String username, String provider, String cookieRefreshToken){
         String redisRefreshToken = getRefreshToken(username, provider);
+        if (redisRefreshToken == null) {
+            return false;
+        }
+
+        if (cookieRefreshToken == null) {
+            return false;
+        }
+
         return redisRefreshToken.equals(cookieRefreshToken);
     }
 
