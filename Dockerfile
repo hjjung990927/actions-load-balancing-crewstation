@@ -65,7 +65,6 @@ FROM eclipse-temurin:17-jre
 # 타임존 설정 (한국 시간)
 ENV TZ=Asia/Seoul
 
-
 # JAR 복사 (위 단계에서 생성된 JAR)
 COPY --from=build /crewstation/build/libs/crew-station-0.0.1-SNAPSHOT.jar crewstation.jar
 
