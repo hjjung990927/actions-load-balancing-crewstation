@@ -70,8 +70,3 @@ sms:
   api:
     access: ${SMS_ACCESS}
     secret: ${SMS_SECRET}
-
-
-logging:
-  level:
-    org.apache.ibatis.session.Configuration: DEBUG
