@@ -22,3 +22,12 @@ create table tbl_member
 
 ALTER TABLE tbl_member
     DROP CONSTRAINT tbl_member_member_social_email_key;
+
+select * from tbl_post;
+
+select * from tbl_member_file;
+delete from tbl_member where id = 11;
+delete from tbl_address where id = 2;
+
+insert into tbl_member(member_name, member_phone, member_email,member_password,member_role)
+values ('관리자','01055767406','admin@gmail.com','admin','admin');

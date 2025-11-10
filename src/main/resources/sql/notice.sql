@@ -9,3 +9,6 @@ create table tbl_notice
     constraint fk_notice_member foreign key (member_id)
         references tbl_member (id)
 );
+
+select * from tbl_notice;
+delete from tbl_notice where id = 1;
