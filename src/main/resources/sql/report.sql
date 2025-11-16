@@ -9,5 +9,3 @@ create table tbl_report
     constraint fk_report_member foreign key (member_id)
         references tbl_member (id)
 );
-
-
